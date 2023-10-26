@@ -17,7 +17,10 @@ interface Snippet {
   tags: Array<string>;
   categoryId: string;
   liveBroadcastContent: string;
-  localized: LocalizedData;
+  localized: {
+    title: string;
+    description: string;
+  };
   defaultAudioLanguage: string;
 }
 
@@ -33,11 +36,6 @@ interface ThumbnailData {
   url: string;
   width: number;
   height: number;
-}
-
-interface LocalizedData {
-  title: string;
-  description: string;
 }
 
 interface Statistics {
