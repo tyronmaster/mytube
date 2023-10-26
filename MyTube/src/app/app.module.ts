@@ -16,13 +16,13 @@ import { AuthComponent } from './header/auth/auth.component';
     SearchResultListComponent,
     HeaderComponent,
     SearchBarComponent,
-    AuthComponent
+    AuthComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
