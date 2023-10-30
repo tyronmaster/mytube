@@ -8,6 +8,7 @@ import { SearchResultListComponent } from './search/search-result-list/search-re
 import { HeaderComponent } from './header/header/header.component';
 import { SearchBarComponent } from './header/search-bar/search-bar.component';
 import { AuthComponent } from './header/auth/auth.component';
+import { SettingsComponent } from './header/settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { AuthComponent } from './header/auth/auth.component';
     HeaderComponent,
     SearchBarComponent,
     AuthComponent,
+    SettingsComponent,
   ],
   imports: [
     BrowserModule,
