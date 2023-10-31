@@ -11,6 +11,10 @@ $light: hsla(0, 100%, 100%, 0.88);
   margin: 0 15px;
   transition: 1s;
 
+  @media screen and (max-width: 540px) {
+    margin: 0;
+  }
+
   &:hover,
   &:focus {
     border-color: $focus-color;
@@ -47,7 +51,6 @@ $light: hsla(0, 100%, 100%, 0.88);
   align-items: center;
   width: 50px;
   height: 100%;
-  // border-radius: 50%;
   top: 0;
   right: 0;
   background: $main-color;
