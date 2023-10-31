@@ -5,23 +5,30 @@ $light: hsla(0, 100%, 100%, 0.88);
 .search__bar {
   position: relative;
   overflow: hidden;
+  border: 1px solid $main-color;
+  border-radius: 20px;
+  width: 250px;
+  margin: 0 15px;
+  transition: 1s;
+
+  &:hover,
+  &:focus {
+    border-color: $focus-color;
+  }
 }
 
 .search__input {
   background: none;
-  border: 1px solid $main-color;
-  border-radius: 20px;
-  padding: 10px 25px;
+  padding: 10px 20px;
   font-weight: 600;
   color: $focus-color;
-  margin: 0 15px;
-  width: 250px;
+  width: 100%;
+  overflow: hidden;
   transition: 1s;
 
   &:hover,
   &:focus {
     color: $light;
-    border-color: $focus-color;
   }
   &::placeholder {
     color: $focus-color;
@@ -38,15 +45,15 @@ $light: hsla(0, 100%, 100%, 0.88);
   display: flex;
   justify-content: center;
   align-items: center;
-  // width: 100%;
-  // height: 100%;
-  border-radius: 50%;
+  width: 50px;
+  height: 100%;
+  // border-radius: 50%;
   top: 0;
   right: 0;
   background: $main-color;
 
   & svg {
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
   }
 }
