@@ -1,0 +1,33 @@
+$main-color: hsla(0, 0%, 53.3%, 0.4);
+$focus-color: hsla(0, 100%, 100%, 0.5);
+
+.settings__button {
+  width: 35px;
+  height: 35px;
+  border: 1px solid $main-color;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+
+  &:hover {
+    border: 1px solid $focus-color;
+    transition: 1s;
+
+    & svg .settings {
+      fill: $focus-color;
+      transition: 1s;
+    }
+  }
+
+  & svg {
+    height: 25px;
+    width: 25px;
+
+    & .settings {
+      fill: $main-color;
+      transition: 1s;
+    }
+  }
+}

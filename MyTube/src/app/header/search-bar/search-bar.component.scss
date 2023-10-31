@@ -1,0 +1,52 @@
+$main-color: hsla(0, 0%, 53.3%, 0.4);
+$focus-color: hsla(0, 100%, 100%, 0.5);
+$light: hsla(0, 100%, 100%, 0.88);
+
+.search__bar {
+  position: relative;
+  overflow: hidden;
+}
+
+.search__input {
+  background: none;
+  border: 1px solid $main-color;
+  border-radius: 20px;
+  padding: 10px 25px;
+  font-weight: 600;
+  color: $focus-color;
+  margin: 0 15px;
+  width: 250px;
+  transition: 1s;
+
+  &:hover,
+  &:focus {
+    color: $light;
+    border-color: $focus-color;
+  }
+  &::placeholder {
+    color: $focus-color;
+    font-weight: normal;
+  }
+  &:placeholder-shown {
+    color: $main-color;
+    font-weight: normal;
+  }
+}
+
+.search__button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // width: 100%;
+  // height: 100%;
+  border-radius: 50%;
+  top: 0;
+  right: 0;
+  background: $main-color;
+
+  & svg {
+    width: 25px;
+    height: 25px;
+  }
+}
