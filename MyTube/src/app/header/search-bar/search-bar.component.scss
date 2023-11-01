@@ -11,8 +11,13 @@ $light: hsla(0, 100%, 100%, 0.88);
   margin: 0 15px;
   transition: 1s;
 
-  @media screen and (max-width: 540px) {
+  @media screen and (max-width: 680px) {
     width: 250px;
+    margin: 0;
+  }
+
+  @media screen and (max-width:500px) {
+    width: 150px;
     margin: 0;
   }
 

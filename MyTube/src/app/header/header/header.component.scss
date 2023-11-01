@@ -14,6 +14,10 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
+
+  @media screen and (max-width: 680px) {
+    padding-left: 45px;
+  }
 }
 
 .header__logo {
@@ -27,7 +31,18 @@
   align-items: center;
   justify-content: space-between;
 
-  @media screen and (max-width: 540px) {
+  .logo__sign{
+    background: url(../../../assets/icons/logo-sign.svg);
+    height: 30px;
+    width: 45px;
+  }
+  .logo__text{
+    background: url(../../../assets/icons/logo-text.svg);
+    height: 24px;
+    width: 71px;
+  }
+
+  @media screen and (max-width: 680px) {
     .logo__text {
       display: none;
     }
