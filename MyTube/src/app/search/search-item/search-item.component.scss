@@ -17,12 +17,48 @@ $light-data: hsla(0, 0%, 60%, 1);
   // cursor: pointer;
 
   &.border {
-    border-bottom: 3px solid #793434;
+    border-bottom: 3px solid;
     transition: 1s;
-  }
-  &:hover.border {
-    border-bottom: 3px solid #be6262;
-    transition: 1s;
+
+    &.red {
+      border-color: #793434;
+      transition: 1s;
+
+      &:hover {
+        border-color: #be6262;
+        transition: 1s;
+      }
+    }
+
+    &.yellow {
+      border-color: #817510;
+      transition: 1s;
+
+      &:hover {
+        border-color: #eabf13;
+        transition: 1s;
+      }
+    }
+
+    &.green {
+      border-color: #198110;
+      transition: 1s;
+
+      &:hover {
+        border-color: #45ea13;
+        transition: 1s;
+      }
+    }
+
+    &.blue {
+      border-color: #2a2d7f;
+      transition: 1s;
+
+      &:hover {
+        border-color: #2247bf;
+        transition: 1s;
+      }
+    }
   }
 }
 
