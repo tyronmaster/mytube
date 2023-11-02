@@ -1,7 +1,7 @@
 import { Kind } from './kind';
 import { SearchItem } from './search-item.model';
 
-export interface SearchResultList {
+export interface SearchResultResponse {
   TODO?: TodoList;
 
   kind: Kind.Response;

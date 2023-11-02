@@ -1,6 +1,11 @@
 <div class="search__bar">
-  <input class="search__input" type="text" placeholder="Search video" />
-  <button class="search__button">
+  <input
+    class="search__input"
+    type="text"
+    placeholder="Search video"
+    [(ngModel)]="searchString"
+  />
+  <button class="search__button" (click)="checkRequestString()">
     <svg
       version="1.1"
       id="Layer_1"
