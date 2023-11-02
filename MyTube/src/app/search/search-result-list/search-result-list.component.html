@@ -1,6 +1,6 @@
-<div
-  class="search__results"
-  (searchRequestString)="requestString"
->
-  <app-search-item *ngFor="let i of testDataService.data"></app-search-item>
+<div class="search__results">
+  <app-search-item
+    *ngFor="let item of searchResultData"
+    [item]="item"
+  ></app-search-item>
 </div>

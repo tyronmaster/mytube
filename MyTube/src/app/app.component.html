@@ -1,7 +1,7 @@
 <div class="wrapper">
   <div class="container">
     <app-header></app-header>
-    <app-search-result-list *ngIf="isSearchData"></app-search-result-list>
+    <app-search-result-list *ngIf="isSearchData" [searchResultData] = "searchResultData"></app-search-result-list>
     <app-nodata *ngIf="!isSearchData"></app-nodata>
   </div>
 </div>

@@ -1,33 +1,49 @@
 <div class="search__item border">
-  <a class="item__picture">
-    <img class="item__image" src="assets/images/test-image.jpg" alt="" />
-  </a>
-  <ul class="item__data">
-    <li class="data__element">
-      <img class="views__icon" src="assets/icons/viewed.svg" alt="views icon" />
-      1000
-    </li>
-    <li class="data__element">
-      <img class="likes__icon" src="assets/icons/liked.svg" alt="likes icon" />
-      680
-    </li>
-    <li class="data__element">
+  <div class="item__content">
+    <a class="item__picture">
       <img
-        class="dislikes__icon"
-        src="assets/icons/dislike.svg"
-        alt="dislikes icon"
+        class="item__image"
+        src="{{ item.snippet.thumbnails.medium.url }}"
+        alt=""
       />
-      320
-    </li>
-    <li class="data__element">
-      <img
-        class="comments__icon"
-        src="assets/icons/comments.svg"
-        alt="comments icon"
-      />
-      250
-    </li>
-  </ul>
-  <h2 class="item__title">Item Title #</h2>
+    </a>
+    <ul class="item__data">
+      <li class="data__element">
+        <img
+          class="views__icon"
+          src="assets/icons/viewed.svg"
+          alt="views icon"
+        />
+        {{ item.statistics.viewCount }}
+      </li>
+      <li class="data__element">
+        <img
+          class="likes__icon"
+          src="assets/icons/liked.svg"
+          alt="likes icon"
+        />
+        {{ item.statistics.likeCount }}
+      </li>
+      <li class="data__element">
+        <img
+          class="dislikes__icon"
+          src="assets/icons/dislike.svg"
+          alt="dislikes icon"
+        />
+        {{ item.statistics.dislikeCount }}
+      </li>
+      <li class="data__element">
+        <img
+          class="comments__icon"
+          src="assets/icons/comments.svg"
+          alt="comments icon"
+        />
+        {{ item.statistics.commentCount }}
+      </li>
+    </ul>
+    <a class="item__title" href="#">{{ item.snippet.title }}</a>
+    <p class="item__date">Posted at {{ item.snippet.publishedAt | date }}</p>
+  </div>
+
   <button class="item__button">more...</button>
 </div>

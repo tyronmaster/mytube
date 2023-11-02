@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { SearchItem } from '../models/search-item.model';
 
 @Component({
   selector: 'app-search-item',
@@ -8,4 +9,6 @@ import { Component } from '@angular/core';
   templateUrl: './search-item.component.html',
   styleUrls: ['./search-item.component.scss'],
 })
-export class SearchItemComponent {}
+export class SearchItemComponent {
+  @Input() item!: SearchItem;
+}
