@@ -4,6 +4,7 @@
     type="text"
     placeholder="Search video"
     [(ngModel)]="searchString"
+    (change)="checkRequestString()"
   />
   <button class="search__button" (click)="checkRequestString()">
     <svg

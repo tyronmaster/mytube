@@ -8,20 +8,11 @@ import { HttpService } from 'src/app/services/http.service';
   styleUrls: ['./search-bar.component.scss'],
 })
 export class SearchBarComponent {
-  searchString: String = '';
+  searchString: string = '';
 
-  @Input() isSearchData: boolean = false;
-  @Output() sendRequestString = new EventEmitter();
+  @Output() sendRequestStringEvent = new EventEmitter<string>();
 
   checkRequestString() {
-    console.log('button click', this.searchString);
-    if (this.searchString.length >= 3) {
-      this.sendRequestString.emit(this.searchString);
-    }
-    this.sendRequestString.emit(undefined);
-  }
-
-  onClick(){
-
+    this.sendRequestStringEvent.emit(this.searchString);
   }
 }

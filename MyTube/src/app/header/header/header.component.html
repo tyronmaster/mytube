@@ -14,7 +14,9 @@
         />
       </a>
     </div>
-    <app-search-bar></app-search-bar>
+    <app-search-bar
+      (sendRequestStringEvent)="getDataFromChild($event)"
+    ></app-search-bar>
     <app-settings></app-settings>
   </div>
 

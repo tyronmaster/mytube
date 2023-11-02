@@ -9,19 +9,29 @@ import { SearchItem } from './search/models/search-item.model';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'MyTube';
-  isSearchData: Boolean = true;
+
+  isSearchData: Boolean = false;
   searchResultData!: Array<SearchItem>;
 
   constructor(private http: HttpService) {}
 
-  ngOnInit() {
+  receiveRequestedData(requestStr: string) {
     this.http.getData().subscribe((data) => {
-      this.searchResultData = data.items;
+      this.searchResultData = data.items.filter((item: SearchItem) =>
+        item.snippet.title.toLowerCase().includes(requestStr)
+      );
+      console.log(this.searchResultData);
     });
   }
 
-  onDataReceived(){
+  loadData($event: string) {
+    let searchString = $event;
 
+    if (searchString.length >= 3) {
+      this.isSearchData = true;
+      this.receiveRequestedData(searchString);
+    } else {
+      this.isSearchData = false;
+    }
   }
 }
