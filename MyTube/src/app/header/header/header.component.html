@@ -17,9 +17,10 @@
     <app-search-bar
       (sendRequestStringEvent)="getDataFromChild($event)"
     ></app-search-bar>
-    <app-settings></app-settings>
+    <app-settings
+      (changeSortingVisibility)="showSorting($event)"
+    ></app-settings>
   </div>
-
   <div class="header__user">
     <app-auth></app-auth>
   </div>

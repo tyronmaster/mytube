@@ -11,6 +11,7 @@ import { SearchResultListComponent } from './search/search-result-list/search-re
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NodataComponent } from './search/nodata/nodata.component';
+import { SortingComponent } from './header/sorting/sorting.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { NodataComponent } from './search/nodata/nodata.component';
     AuthComponent,
     SettingsComponent,
     NodataComponent,
+    SortingComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],

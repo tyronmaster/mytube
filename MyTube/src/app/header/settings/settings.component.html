@@ -1,4 +1,10 @@
-<button class="settings__button">
+<button
+  class="settings__button"
+  (click)="
+    isSortingVisible = !isSortingVisible;
+    turnSortingVisibility(isSortingVisible)
+  "
+>
   <svg
     version="1.1"
     id="Layer_1"

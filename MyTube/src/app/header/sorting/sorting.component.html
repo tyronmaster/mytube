@@ -1,0 +1,20 @@
+<div class="sorting">
+  <h3 class="sorting__title">Sort results by:</h3>
+  <button class="sorting__element" (click)="addTarget('default')">
+    Default
+  </button>
+  <button
+    class="sorting__element up"
+    [ngClass]="sortby === 'date' ? (direction ? 'up' : 'down') : ''"
+    (click)="addTarget('date')"
+  >
+    Date
+  </button>
+  <button
+    class="sorting__element up"
+    [ngClass]="sortby === 'views' ? (direction ? 'up' : 'down') : ''"
+    (click)="addTarget('views')"
+  >
+    Views
+  </button>
+</div>
