@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NodataComponent } from './search/nodata/nodata.component';
 import { SortingComponent } from './header/sorting/sorting.component';
+import { SortingPipe } from './pipes/sorting.pipe';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { SortingComponent } from './header/sorting/sorting.component';
     SettingsComponent,
     NodataComponent,
     SortingComponent,
+    SortingPipe,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { TestDataService } from 'src/app/services/test-data.service';
 import { SearchItemComponent } from '../search-item/search-item.component';
 import { SearchItem } from '../models/search-item.model';
 
