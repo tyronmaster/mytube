@@ -23,6 +23,5 @@ export class SortingComponent {
       sortby: this.sortby,
       direction: this.direction,
     });
-    // console.log(str, this.sortby, this.direction);
   }
 }

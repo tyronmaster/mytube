@@ -8,7 +8,7 @@ import { SortingData } from 'src/app/models/sorting-data.model';
 })
 export class HeaderComponent {
   @Output() sendToParent = new EventEmitter<string>();
-  @Output() sendSortingData = new EventEmitter<boolean>(); //to app-component
+  @Output() sendSortingData = new EventEmitter<boolean>();
 
   getDataFromChild($event: string) {
     console.log('received data from search-bar child component');
