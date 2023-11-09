@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { SortingData } from 'src/app/models/sorting-data.model';
+import { SortingData } from 'src/app/core/models/sorting-data.model';
 
 @Component({
   selector: 'app-header',
@@ -9,6 +9,7 @@ import { SortingData } from 'src/app/models/sorting-data.model';
 export class HeaderComponent {
   @Output() sendToParent = new EventEmitter<string>();
   @Output() sendSortingData = new EventEmitter<boolean>();
+  sortData: SortingData | undefined;
 
   getDataFromChild($event: string) {
     console.log('received data from search-bar child component');
@@ -19,5 +20,9 @@ export class HeaderComponent {
   showSorting($event: boolean) {
     this.isSortingShown = $event;
     this.sendSortingData.emit($event);
+  }
+
+  makeSort(data: SortingData) {
+    this.sortData = data;
   }
 }

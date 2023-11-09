@@ -1,0 +1,9 @@
+
+
+    <app-search-result-list
+      *ngIf="isSearchData"
+      [searchResultData]="
+        searchResultData | sorting : sortData.sortby : sortData.direction
+      "
+    ></app-search-result-list>
+    <app-nodata *ngIf="!isSearchData"></app-nodata>

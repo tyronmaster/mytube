@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { SortingData } from 'src/app/models/sorting-data.model';
+import { SortingData } from 'src/app/core/models/sorting-data.model';
 
 @Component({
   selector: 'app-sorting',

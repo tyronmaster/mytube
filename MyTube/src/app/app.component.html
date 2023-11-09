@@ -1,20 +1,7 @@
 <div class="wrapper">
   <div class="container">
-    <app-header
-      (sendToParent)="loadData($event)"
-      (sendSortingData)="showSorting($event)"
-    ></app-header>
-    <app-sorting
-      *ngIf="isSortingShown"
-      (sendSortingType)="makeSort($event)"
-    ></app-sorting>
-
-    <app-search-result-list
-      *ngIf="isSearchData"
-      [searchResultData]="
-        searchResultData | sorting : sortData.sortby : sortData.direction
-      "
-    ></app-search-result-list>
-    <app-nodata *ngIf="!isSearchData"></app-nodata>
+    <app-header></app-header>
+    <app-main></app-main>
+    <app-footer></app-footer>
   </div>
 </div>

@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { SearchItem } from 'src/app/search/models/search-item.model';
-import { HttpService } from 'src/app/services/http.service';
+import { SearchItem } from 'src/app/mytube/models/search-item.model';
+import { HttpService } from 'src/app/core/services/http.service';
 
 @Component({
   selector: 'app-search-bar',

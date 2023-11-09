@@ -1,3 +1,8 @@
+<!-- <header
+  class="header"
+  (sendToParent)="loadData($event)"
+  (sendSortingData)="showSorting($event)"
+> -->
 <header class="header">
   <div class="header__toolbar">
     <div class="header__logo">
@@ -24,4 +29,8 @@
   <div class="header__user">
     <app-auth></app-auth>
   </div>
+  <app-sorting
+  *ngIf="isSortingShown"
+  (sendSortingType)="makeSort($event)"
+></app-sorting>
 </header>

@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { SearchItemComponent } from '../search-item/search-item.component';
-import { SearchItem } from '../models/search-item.model';
+import { SearchItem } from '../../models/search-item.model';
 
 @Component({
   selector: 'app-search-result-list',
@@ -13,5 +13,4 @@ import { SearchItem } from '../models/search-item.model';
 export class SearchResultListComponent {
   @Input() searchResultData!: Array<SearchItem>;
   requestString: String = '';
-
 }
