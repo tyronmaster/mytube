@@ -29,8 +29,9 @@
   <div class="header__user">
     <app-auth></app-auth>
   </div>
+
+</header>
   <app-sorting
   *ngIf="isSortingShown"
   (sendSortingType)="makeSort($event)"
 ></app-sorting>
-</header>

@@ -1,4 +1,5 @@
 $light: hsla(0, 100%, 100%, 0.88);
+$shadowed: hsla(0, 0%, 100%, 0.4);
 
 .sorting {
   margin: 0 auto;
@@ -15,7 +16,14 @@ $light: hsla(0, 100%, 100%, 0.88);
     display: inline-block;
     font-weight: bold;
     cursor: pointer;
-    color: $light;
+    color: $shadowed;
+    transition: 1s;
+
+    &.active,
+    &:hover {
+      color: $light;
+      transition: 1s;
+    }
   }
 }
 

@@ -12,7 +12,7 @@ export class SortingComponent {
   sortby: string = 'default';
   direction: boolean = true;
 
-  addTarget(str: string) {
+  setSortingBy(str: string) {
     if (str !== this.sortby) {
       this.sortby = str;
       this.direction = true;

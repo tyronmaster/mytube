@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { SortingData } from 'src/app/core/models/sorting-data.model';
-import { HttpService } from 'src/app/core/services/http.service';
+import { HttpService } from 'src/app/mytube/services/http.service';
 import { SearchItem } from '../../models/search-item.model';
 import { SearchResultListComponent } from '../../components/search-result-list/search-result-list.component';
 
@@ -41,6 +41,4 @@ export class MainComponent {
   showSorting(val: boolean) {
     this.isSortingShown = val;
   }
-
-
 }

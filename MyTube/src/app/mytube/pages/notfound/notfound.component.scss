@@ -1,0 +1,12 @@
+:host{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.notfound__text{
+  display: block;
+  max-width: 500px;
+  text-align: center;
+}

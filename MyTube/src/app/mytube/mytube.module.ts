@@ -6,10 +6,11 @@ import { NodataComponent } from './components/nodata/nodata.component';
 import { SortingComponent } from '../core/components/sorting/sorting.component';
 import { SearchResultListComponent } from './components/search-result-list/search-result-list.component';
 import { SortingPipe } from './pipes/sorting.pipe';
+import { NotfoundComponent } from './pages/notfound/notfound.component';
 
 @NgModule({
-  declarations: [MainComponent, NodataComponent, SortingPipe],
+  declarations: [MainComponent, NodataComponent, SortingPipe, NotfoundComponent],
   imports: [CommonModule, SearchResultListComponent],
-  exports: [MainComponent],
+  exports: [MainComponent, NotfoundComponent],
 })
 export class MytubeModule {}
