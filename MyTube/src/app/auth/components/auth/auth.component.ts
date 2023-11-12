@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./auth.component.scss'],
 })
 export class AuthComponent {
-
+  isLoggedUser = false;
+  ngDoCheck() {
+    if (localStorage.getItem('token')?.length) {
+      this.isLoggedUser = true;
+    }
+  }
 }

@@ -1,0 +1,37 @@
+<form class="login__form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <div class="form__field">
+    <label class="form__label" for="username">Username</label>
+    <input
+      class="form__input"
+      type="text"
+      name="username"
+      formControlName="username"
+      [class.invalid]="inputValidator('username')"
+      placeholder="Username"
+    />
+    <span class="error__message" *ngIf="inputValidator('username')"
+      >This field is required.</span
+    >
+    <span class="error__message-length" *ngIf="inputLengthValidator('username')"
+      >Username length is less of 3 symbols.</span
+    >
+  </div>
+  <div class="form__field">
+    <label class="form__label" for="password">Password</label>
+    <input
+      class="form__input"
+      type="text"
+      name="username"
+      formControlName="password"
+      [class.invalid]="inputValidator('password')"
+      placeholder="Password"
+    />
+    <span class="error__message" *ngIf="inputValidator('password')"
+      >This field is required.</span
+    >
+    <span class="error__message-length" *ngIf="inputLengthValidator('password')"
+    >Password length is less of 3 symbols.</span
+  >
+  </div>
+  <button class="form__button" type="submit">Login</button>
+</form>
