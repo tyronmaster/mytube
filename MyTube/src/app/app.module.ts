@@ -18,7 +18,6 @@ import { MytubeModule } from './mytube/mytube.module';
     FormsModule,
     HttpClientModule,
     CoreModule,
-    MytubeModule,
   ],
 })
 export class AppModule {}

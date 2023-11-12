@@ -6,7 +6,7 @@
 <header class="header">
   <div class="header__toolbar">
     <div class="header__logo">
-      <a href="#" class="logo__link">
+      <a class="logo__link" routerLink="">
         <img
           class="logo__sign"
           src="assets/icons/logo-sign.svg"
@@ -30,8 +30,8 @@
     <app-auth></app-auth>
   </div>
 
-</header>
   <app-sorting
   *ngIf="isSortingShown"
   (sendSortingType)="makeSort($event)"
 ></app-sorting>
+</header>

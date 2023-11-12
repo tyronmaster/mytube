@@ -1,7 +1,18 @@
-<a class="user__avatar">
+<a
+  class="user__auth inactive"
+  routerLink="/auth"
+  ngClass="token.length > 0 ? 'user' : 'inactive'"
+>
   <img
-    class="user__photo"
+    class="user__photo inactive"
     src="assets/images/user-photo.png"
     alt="user photo"
   />
+</a>
+<a
+  class="user__auth active"
+  routerLink="/login"
+  ngClass="token.length === 0 ? 'active' : 'inactive'"
+>
+  <p class="login__text">LogIn</p>
 </a>

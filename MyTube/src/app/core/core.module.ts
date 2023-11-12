@@ -7,6 +7,7 @@ import { SortingComponent } from './components/sorting/sorting.component';
 import { AuthModule } from '../auth/auth.module';
 import { FooterComponent } from './pages/footer/footer.component';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { FormsModule } from '@angular/forms';
     SortingComponent,
     FooterComponent,
   ],
-  imports: [CommonModule, AuthModule, FormsModule],
-  exports: [HeaderComponent, FooterComponent],
+  imports: [CommonModule, AuthModule, FormsModule, RouterModule],
+  exports: [HeaderComponent, FooterComponent, SortingComponent],
 })
 export class CoreModule {}

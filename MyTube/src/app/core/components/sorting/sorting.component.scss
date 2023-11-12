@@ -1,6 +1,14 @@
 $light: hsla(0, 100%, 100%, 0.88);
 $shadowed: hsla(0, 0%, 100%, 0.4);
 
+:host {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+}
+
 .sorting {
   margin: 0 auto;
   text-align: center;
@@ -18,6 +26,8 @@ $shadowed: hsla(0, 0%, 100%, 0.4);
     cursor: pointer;
     color: $shadowed;
     transition: 1s;
+    padding-left: 10px;
+    position: relative;
 
     &.active,
     &:hover {
@@ -29,11 +39,17 @@ $shadowed: hsla(0, 0%, 100%, 0.4);
 
 .up::before {
   content: "\2191";
+  position: absolute;
+  left: 0;
+  top: 0;
   color: white;
   font: 14px;
 }
 .down::before {
   content: "\2193";
+  position: absolute;
+  left: 0;
+  top: 0;
   color: white;
   font: 14px;
 }

@@ -3,10 +3,10 @@
     class="search__input"
     type="text"
     placeholder="Search video"
-    [(ngModel)]="searchString"
-    (change)="checkRequestString()"
+    #searchString
+    (change)="sendRequestString(searchString.value)"
   />
-  <button class="search__button" (click)="checkRequestString()">
+  <button class="search__button" (click)="sendRequestString(searchString.value)">
     <svg
       version="1.1"
       id="Layer_1"
