@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CoreModule } from './core/core.module';
-import { MytubeModule } from './mytube/mytube.module';
+import { SortingPipe } from './mytube/pipes/sorting.pipe';
 
 @NgModule({
   declarations: [AppComponent],

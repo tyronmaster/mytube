@@ -6,6 +6,8 @@ import { SearchResultListComponent } from './components/search-result-list/searc
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { RouterModule, Routes } from '@angular/router';
 import { DetailComponent } from './pages/detail/detail.component';
+import { SortingPipe } from './pipes/sorting.pipe';
+import { SearchItemComponent } from './components/search-item/search-item.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
@@ -18,12 +20,15 @@ const routes: Routes = [
     NodataComponent,
     NotfoundComponent,
     DetailComponent,
+    SearchResultListComponent,
+    SortingPipe,
   ],
   imports: [
-    SearchResultListComponent,
+    SearchItemComponent,
     CommonModule,
     RouterModule.forChild(routes),
   ],
-  exports: [MainComponent, NotfoundComponent],
+  exports: [MainComponent, NotfoundComponent, SortingPipe],
+  providers: [SortingPipe]
 })
 export class MytubeModule {}

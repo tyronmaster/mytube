@@ -8,7 +8,6 @@ import { AuthModule } from '../auth/auth.module';
 import { FooterComponent } from './pages/footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
-import { SortingPipe } from './pipes/sorting.pipe';
 import { AppComponent } from '../app.component';
 
 const routes: Routes = [{ path: '', component: AppComponent }];
@@ -20,9 +19,8 @@ const routes: Routes = [{ path: '', component: AppComponent }];
     SettingsComponent,
     SortingComponent,
     FooterComponent,
-    SortingPipe
   ],
   imports: [CommonModule, AuthModule, FormsModule, RouterModule],
-  exports: [HeaderComponent, FooterComponent, SortingComponent, SortingPipe],
+  exports: [HeaderComponent, FooterComponent, SortingComponent],
 })
 export class CoreModule {}

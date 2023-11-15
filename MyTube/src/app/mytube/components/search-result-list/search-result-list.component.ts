@@ -5,13 +5,12 @@ import { SearchItem } from '../../models/search-item.model';
 import { SortingData } from 'src/app/core/models/sorting-data.model';
 import { SearchRequestService } from 'src/app/core/services/search-request.service';
 import { HttpService } from 'src/app/core/services/http.service';
+import { SortingPipe } from '../../pipes/sorting.pipe';
 
 @Component({
   selector: 'app-search-result-list',
-  standalone: true,
   templateUrl: './search-result-list.component.html',
   styleUrls: ['./search-result-list.component.scss'],
-  imports: [CommonModule, SearchItemComponent],
 })
 export class SearchResultListComponent {
   constructor(

@@ -1,10 +1,10 @@
-<div
-  class="search__results"
-  *ngIf="isSearchData"
->
+<div class="search__results" *ngIf="isSearchData">
   <app-search-item
-    *ngFor="let item of searchResultData"
+    *ngFor="
+      let item of searchResultData
+        | sorting : sortData.sortby : sortData.direction
+    "
     [item]="item"
   ></app-search-item>
 </div>
- <!-- | sorting : sortData.sortby : sortData.direction -->
+<!-- | sorting : sortData.sortby : sortData.direction -->
