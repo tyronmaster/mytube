@@ -16,6 +16,7 @@
     </div>
     <app-search-bar></app-search-bar>
     <app-settings
+    *ngIf="isRequestValid"
       (changeSortingVisibility)="showSorting($event)"
     ></app-settings>
   </div>

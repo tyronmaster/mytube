@@ -5,7 +5,6 @@ import { SearchItem } from '../../models/search-item.model';
 import { SortingData } from 'src/app/core/models/sorting-data.model';
 import { SearchRequestService } from 'src/app/core/services/search-request.service';
 import { HttpService } from 'src/app/core/services/http.service';
-import { SortingPipe } from '../../pipes/sorting.pipe';
 
 @Component({
   selector: 'app-search-result-list',
@@ -15,7 +14,7 @@ import { SortingPipe } from '../../pipes/sorting.pipe';
 export class SearchResultListComponent {
   constructor(
     private searchRequest: SearchRequestService,
-    private http: HttpService,
+    private http: HttpService
   ) {}
 
   isSearchData: boolean = false;
@@ -31,6 +30,9 @@ export class SearchResultListComponent {
       if (this.request.length >= 3) {
         this.receiveRequestedData(this.request);
         this.isSearchData = true;
+      } else {
+        this.searchResultData = [];
+        this.searchRequest.isRequestValid = false;
       }
     });
   }

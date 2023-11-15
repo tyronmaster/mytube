@@ -23,12 +23,7 @@ const routes: Routes = [
     SearchResultListComponent,
     SortingPipe,
   ],
-  imports: [
-    SearchItemComponent,
-    CommonModule,
-    RouterModule.forChild(routes),
-  ],
-  exports: [MainComponent, NotfoundComponent, SortingPipe],
-  providers: [SortingPipe]
+  imports: [SearchItemComponent, CommonModule, RouterModule.forChild(routes)],
+  exports: [MainComponent, NotfoundComponent],
 })
 export class MytubeModule {}

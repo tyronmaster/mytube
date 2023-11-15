@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { SortingData } from 'src/app/core/models/sorting-data.model';
+import { SearchRequestService } from '../../services/search-request.service';
 
 @Component({
   selector: 'app-header',
@@ -7,6 +8,14 @@ import { SortingData } from 'src/app/core/models/sorting-data.model';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
+  constructor(private searchRequests: SearchRequestService) {}
+
+  isRequestValid = false;
+
+  ngDoCheck() {
+    this.isRequestValid = this.searchRequests.isRequestValid;
+  }
+
   @Output() sendSortingData = new EventEmitter<boolean>();
   sortData: SortingData | undefined;
 
