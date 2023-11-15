@@ -1,8 +1,3 @@
-<!-- <header
-  class="header"
-  (sendToParent)="loadData($event)"
-  (sendSortingData)="showSorting($event)"
-> -->
 <header class="header">
   <div class="header__toolbar">
     <div class="header__logo">
@@ -19,9 +14,7 @@
         />
       </a>
     </div>
-    <app-search-bar
-      (sendRequestStringEvent)="getDataFromChild($event)"
-    ></app-search-bar>
+    <app-search-bar></app-search-bar>
     <app-settings
       (changeSortingVisibility)="showSorting($event)"
     ></app-settings>

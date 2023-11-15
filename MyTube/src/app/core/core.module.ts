@@ -7,7 +7,11 @@ import { SortingComponent } from './components/sorting/sorting.component';
 import { AuthModule } from '../auth/auth.module';
 import { FooterComponent } from './pages/footer/footer.component';
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { SortingPipe } from './pipes/sorting.pipe';
+import { AppComponent } from '../app.component';
+
+const routes: Routes = [{ path: '', component: AppComponent }];
 
 @NgModule({
   declarations: [
@@ -16,8 +20,9 @@ import { RouterModule } from '@angular/router';
     SettingsComponent,
     SortingComponent,
     FooterComponent,
+    SortingPipe
   ],
   imports: [CommonModule, AuthModule, FormsModule, RouterModule],
-  exports: [HeaderComponent, FooterComponent, SortingComponent],
+  exports: [HeaderComponent, FooterComponent, SortingComponent, SortingPipe],
 })
 export class CoreModule {}

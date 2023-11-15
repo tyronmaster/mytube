@@ -7,14 +7,8 @@ import { SortingData } from 'src/app/core/models/sorting-data.model';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  @Output() sendToParent = new EventEmitter<string>();
   @Output() sendSortingData = new EventEmitter<boolean>();
   sortData: SortingData | undefined;
-
-  getDataFromChild($event: string) {
-    console.log('received data from search-bar child component');
-    this.sendToParent.emit($event);
-  }
 
   isSortingShown: boolean = false;
   showSorting($event: boolean) {

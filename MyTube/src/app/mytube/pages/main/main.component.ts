@@ -3,6 +3,7 @@ import { SortingData } from 'src/app/core/models/sorting-data.model';
 import { HttpService } from 'src/app/core/services/http.service';
 import { SearchItem } from '../../models/search-item.model';
 import { SearchResultListComponent } from '../../components/search-result-list/search-result-list.component';
+import { SearchRequestService } from 'src/app/core/services/search-request.service';
 
 @Component({
   selector: 'app-main',
@@ -10,35 +11,10 @@ import { SearchResultListComponent } from '../../components/search-result-list/s
   styleUrls: ['./main.component.scss'],
 })
 export class MainComponent {
+  constructor(private searchRequest: SearchRequestService) {}
+
   isSearchData: boolean = false;
-  searchResultData!: Array<SearchItem>;
-
-  isSortingShown: boolean = false;
-  sortData: SortingData = { sortby: 'default', direction: true };
-
-  constructor(private http: HttpService) {}
-
-  receiveRequestedData(requestStr: string) {
-    this.http.getData().subscribe((data) => {
-      this.searchResultData = data.items.filter((item: SearchItem) =>
-        item.snippet.title.toLowerCase().includes(requestStr)
-      );
-      console.log(this.searchResultData);
-    });
-  }
-
-  loadData($event: string) {
-    let searchString = $event;
-
-    if (searchString.length >= 3) {
-      this.isSearchData = true;
-      this.receiveRequestedData(searchString);
-    } else {
-      this.isSearchData = false;
-    }
-  }
-
-  showSorting(val: boolean) {
-    this.isSortingShown = val;
+  ngOnInit() {
+    this.isSearchData = this.searchRequest.isRequestValid;
   }
 }

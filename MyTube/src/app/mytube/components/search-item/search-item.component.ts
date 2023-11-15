@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { SearchItem } from '../../models/search-item.model';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-search-item',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './search-item.component.html',
   styleUrls: ['./search-item.component.scss'],
 })

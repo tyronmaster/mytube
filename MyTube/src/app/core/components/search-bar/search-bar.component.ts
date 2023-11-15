@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { SearchItem } from 'src/app/mytube/models/search-item.model';
-import { HttpService } from 'src/app/core/services/http.service';
+import { SearchRequestService } from '../../services/search-request.service';
 
 @Component({
   selector: 'app-search-bar',
@@ -8,9 +7,10 @@ import { HttpService } from 'src/app/core/services/http.service';
   styleUrls: ['./search-bar.component.scss'],
 })
 export class SearchBarComponent {
-  @Output() sendRequestStringEvent = new EventEmitter<string>();
+  constructor(private searchRequest: SearchRequestService){}
 
-  sendRequestString(searchRequest: string) {
-    this.sendRequestStringEvent.emit(searchRequest);
+  updRequestString(searchRequest: string) {
+    this.searchRequest.onRequestInput(searchRequest);
+
   }
 }

@@ -1,6 +1,6 @@
 <div class="search__item border" [ngClass]="coloredAge">
   <div class="item__content">
-    <a class="item__picture">
+    <a class="item__picture" [routerLink]="['item',item.id]">
       <img
         class="item__image"
         src="{{ item.snippet.thumbnails.medium.url }}"
