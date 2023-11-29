@@ -5,6 +5,7 @@ import { SearchItem } from '../../models/search-item.model';
 import { SortingData } from 'src/app/core/models/sorting-data.model';
 import { SearchRequestService } from 'src/app/core/services/search-request.service';
 import { HttpService } from 'src/app/core/services/http.service';
+import { SearchResponseService } from '../../services/search-response.service';
 
 @Component({
   selector: 'app-search-result-list',
@@ -14,7 +15,8 @@ import { HttpService } from 'src/app/core/services/http.service';
 export class SearchResultListComponent {
   constructor(
     private searchRequest: SearchRequestService,
-    private http: HttpService
+    private http: HttpService,
+    private searchResponse: SearchResponseService
   ) {}
 
   isSearchData: boolean = false;
@@ -25,7 +27,7 @@ export class SearchResultListComponent {
   ngOnInit() {
     this.searchRequest.requestString.subscribe((string: string) => {
       this.request = string;
-      console.log('this.request', this.request, this.request.length);
+      // console.log('this.request', this.request, this.request.length);
 
       if (this.request.length >= 3) {
         this.receiveRequestedData(this.request);
@@ -42,8 +44,13 @@ export class SearchResultListComponent {
       this.searchResultData = data.items.filter((item: SearchItem) =>
         item.snippet.title.toLowerCase().includes(requestStr)
       );
-      console.log(this.searchResultData);
+      // console.log(this.searchResultData);
     });
+  }
+
+  ngDoCheck(){
+    this.searchResponse.onResponse(this.searchResultData);
+    // this.searchResponse.responseItems.subscribe((data) => console.log(data));
   }
 
   sortData: SortingData = { sortby: 'default', direction: true };

@@ -12,6 +12,10 @@
   font-size: 14px;
   color: #666666;
 
+  & a {
+    color: white;
+    font-weight: bold;
+  }
 
   & .profile__link {
     padding: 0 15px;

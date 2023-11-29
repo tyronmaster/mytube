@@ -1,1 +1,6 @@
-<p>detail works!</p>
+<div class="detail" *ngIf="item">
+  <div class="detail__picture">
+    <img class="detail__image" [src]="item.snippet.thumbnails.maxres.url" alt="preview">
+  </div>
+</div>
+
